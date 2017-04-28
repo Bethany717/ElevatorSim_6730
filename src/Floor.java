@@ -178,6 +178,11 @@ public class Floor implements EventHandler {
 					Simulator.schedule(newFloorEvent);
 				}
 				break;
+
+			case FloorEvent.REQUEST:
+				ElevatorSim.generateRequest();
+				break;
+
 		}
 	}
 }

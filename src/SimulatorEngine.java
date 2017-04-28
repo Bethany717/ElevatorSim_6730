@@ -22,7 +22,7 @@ public class SimulatorEngine implements EventHandler {
 //            }
             number ++;
             if(number % 2 == 0) {
-                ElevatorSim.generateRequest();
+                //ElevatorSim.generateRequest();
             }
             if(!m_eventList.isEmpty()){
                 Event ev = m_eventList.pollFirst();
@@ -47,9 +47,6 @@ public class SimulatorEngine implements EventHandler {
     }
 
     public void schedule(Event event) {
-        if (this.getCurrentTime() == (int) this.getCurrentTime() && (int) this.getCurrentTime() % 5 == 0) {
-            ElevatorSim.generateRequest();
-        }
         m_eventList.add(event);
     }
 
